@@ -20,7 +20,7 @@
     <button @click="devide">Devide</button> {{div}}
     <br><br>
 
-    Addition
+    Addition :
     <input type="number" v-model="v3" @keyup="addition" placeholder="Enter Value 1" > 
     <input type="number" v-model="v4" @keyup="addition" placeholder="Enter Value 2" >
     {{total}}
@@ -91,8 +91,8 @@
             if(this.v3!='' && this.v4!='')
             {
             
-                this.total = 'Sum is : ' + parseInt(this.v3)+parseInt(this.v4);
-              
+               total_amt = parseInt(this.v3)+parseInt(this.v4);
+                this.total = 'Sum is :' + total_amt;
             }
            
           },
