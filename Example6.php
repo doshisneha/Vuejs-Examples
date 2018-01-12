@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vue.js Inline Editor</title>
+    <title>Example 6</title>
 
     <style>
     /* Hide un-compiled mustache bindings
