@@ -28,7 +28,7 @@
         tasks:[
           {id:1,description:'Hello World',computed:true,},
           {id:2,description:'How R U',computed:false,},
-          {id:3,description:'Fine Thank U',computed:false,},
+          {id:3,description:'Fine Thank U',computed:true,},
           {id:4,description:'And U?',computed:false,},
 
         ]
