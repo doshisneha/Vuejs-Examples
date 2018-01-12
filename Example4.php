@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Example4</title>
-  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+  <script src="vue2.5.13.js"></script>
 </head>
 <body>
 
@@ -10,7 +10,8 @@
   <div id="app" style="margin-top:10%;margin-left:30%">
    <table class="" border="2">
       <tr>
-      <th>Sr.</th>
+       <th>Sr.</th>
+        <th>Product</th>
        <th>Quantity</th>
        <th>Rate</th>
        <th>Total</th>
@@ -18,6 +19,14 @@
       </tr>
       <tr v-for="(row, index) in rows" >
         <td> {{ index +1 }}</td>
+        <td>
+            <select class="form-control">
+                <option value="">Select</option>
+                <option value="1">TEST 1</option>
+                <option value="2">TEST 2</option>
+                <option value="3">TEST 3</option>
+            </select>
+        </td>
         <td><input type="number" v-model="row.qty"  @keyup="get_total"></td>
         <td><input type="number" v-model="row.rate" @keyup="get_total"></td>
         <td><!--<input type="number"  v-bind:value="row.qty * row.rate">-->
@@ -30,7 +39,7 @@
         </td>
       </tr>
       <tr>
-        <td colspan="3" class="text-right">TOTAL</td>
+        <td colspan="4" class="text-right">TOTAL</td>
         <td colspan="1" class="text-right"><input  type="text" readonly :value="total "   /></td>
         <td></td>
     </tr> 
@@ -45,7 +54,7 @@
       data: {
         rows: [
             //initial data
-            { qty: '', rate: '' },
+            {qty: '0', rate: '0'},
            
           ],
           total: 0,
@@ -82,7 +91,8 @@
             {
                 try {
                 this.rows.splice(index + 1, 0, {});
-                } catch (e) {
+                } 
+                catch (e) {
                 console.log(e);
                 }
                 this.get_total();
